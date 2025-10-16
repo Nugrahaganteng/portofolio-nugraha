@@ -1,18 +1,18 @@
 // pages/index.js
 "use client";
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import TrustedLogos from '@/componen/TrustedLogos';
-import SelectedWork from '@/componen/SelectedWork';
-import CertificateShowcase from '@/componen/CertificateShowcase';
-import Toolkit from '@/componen/Toolkit';
-import Testimonials from '@/componen/Testimonials';
-import ContactSection from '@/componen/ContactSection';
-import Footer from '@/componen/Footer';
-import Article from '@/componen/Article';
-import {motion} from 'framer-motion';
-import Menu from '@/componen/Menu';
+import { useState, useEffect } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import TrustedLogos from "@/componen/TrustedLogos";
+import SelectedWork from "@/componen/SelectedWork";
+import CertificateShowcase from "@/componen/CertificateShowcase";
+import Toolkit from "@/componen/Toolkit";
+import Testimonials from "@/componen/Testimonials";
+import ContactSection from "@/componen/ContactSection";
+import Footer from "@/componen/Footer";
+import Article from "@/componen/Article";
+import { motion } from "framer-motion";
+import Menu from "@/componen/Menu";
 
 export default function Home() {
   const [, setScrolled] = useState(false);
@@ -26,9 +26,9 @@ export default function Home() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -43,7 +43,10 @@ export default function Home() {
 
       <main>
         {/* Hero Section - Professional Profile Page (Lighter Background) */}
-        <section className="relative h-[110vh] flex items-center justify-center text-center px-4 sm:px-6 overflow-hidden" id='home'>
+        <section
+          className="relative h-[110vh] flex items-center justify-center text-center px-4 sm:px-6 overflow-hidden"
+          id="home"
+        >
           {/* Background image with subtle effects - Lighter */}
           <div className="absolute inset-0">
             <Image
@@ -55,12 +58,13 @@ export default function Home() {
               quality={100}
               className="transition-opacity duration-500"
               style={{
-                objectPosition: '65% center',
-                filter: 'brightness(0.9) contrast(1.1)' // Kembali ke brightness awal, tanpa blur/saturate tambahan
+                objectPosition: "65% center",
+                filter: "brightness(0.9) contrast(1.1)", // Kembali ke brightness awal, tanpa blur/saturate tambahan
               }}
             />
             {/* Lighter, more subtle overlay */}
-            <div className="absolute inset-0 bg-black/30 dark:bg-black/50" /> {/* Opasitas dikurangi */}
+            <div className="absolute inset-0 bg-black/30 dark:bg-black/50" />{" "}
+            {/* Opasitas dikurangi */}
           </div>
 
           <div className="relative z-20 flex flex-col items-center justify-center h-full">
@@ -71,7 +75,7 @@ export default function Home() {
               className="mb-8"
             >
               <Image
-                src="/image/hero/potogio.png" 
+                src="/image/hero/potogio.png"
                 alt="Profile Picture of Nugraha Algeio"
                 width={180}
                 height={180}
@@ -92,7 +96,10 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
                 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-3 tracking-tight leading-tight"
               >
-                Hi, I'm <span className="text-gray-300 dark:text-gray-200">Nugraha Algeio</span>
+                {"Hi, I'm "}
+                <span className="text-gray-300 dark:text-gray-200">
+                  Nugraha Algeio
+                </span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -108,9 +115,9 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
                 className="text-white dark:text-white mb-10 font-light text-lg sm:text-xl max-w-xl mx-auto leading-relaxed"
               >
-               Seorang insinyur perangkat lunak frontend dan perancang
-                antarmuka yang membangun situs web yang seperti UI UX,
-                mudah diakses, dan berkinerja tinggi.
+                Seorang insinyur perangkat lunak frontend dan perancang
+                antarmuka yang membangun situs web yang seperti UI UX, mudah
+                diakses, dan berkinerja tinggi.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -120,7 +127,10 @@ export default function Home() {
               >
                 <motion.a
                   href="#contact"
-                  whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.3)" }}
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.3)",
+                  }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full sm:w-auto"
                 >
@@ -130,7 +140,10 @@ export default function Home() {
                 </motion.a>
                 <motion.a
                   href="#my-work"
-                  whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.3)" }}
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.3)",
+                  }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full sm:w-auto"
                 >
@@ -157,7 +170,6 @@ export default function Home() {
                 />
               ))}
             </div>
-
           </div>
 
           {/* Selected Work Section */}
@@ -170,7 +182,10 @@ export default function Home() {
             </div>
           </section>
           {/* Certificates Section */}
-          <section className="bg-gray-100 dark:bg-[#0c0a0a] pb-25" id="see-certificate">
+          <section
+            className="bg-gray-100 dark:bg-[#0c0a0a] pb-25"
+            id="see-certificate"
+          >
             <div className="container mx-auto px-2">
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-16 text-center">
                 My certificate and experience
@@ -180,7 +195,10 @@ export default function Home() {
             </div>
           </section>
           {/* Toolkit Section */}
-          <section className="bg-gray-100 dark:bg-[#0c0a0a] pb-25" id="my-skills">
+          <section
+            className="bg-gray-100 dark:bg-[#0c0a0a] pb-25"
+            id="my-skills"
+          >
             <div className="container mx-auto px-2">
               <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-900 dark:text-gray-100 mb-16">
                 My Toolkit
@@ -189,7 +207,10 @@ export default function Home() {
             </div>
           </section>
           {/* Testimonials Section */}
-          <section className="bg-gray-100 dark:bg-[#0c0a0a] pb-25" id="testimonials">
+          <section
+            className="bg-gray-100 dark:bg-[#0c0a0a] pb-25"
+            id="testimonials"
+          >
             <div className="container mx-auto px-2">
               <h2 className="text-3xl md:text-5xl font-semibold text-center text-gray-900 dark:text-gray-100 mb-4">
                 Testimonials
