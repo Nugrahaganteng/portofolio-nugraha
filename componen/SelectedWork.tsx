@@ -75,7 +75,7 @@ export default function SelectedWork() {
         "Admin Seeder",
         "CRUD",
       ],
-        image: "/image/Selected-my-Work/poto1.png",
+        image: "/image/Selected-my-Work/certisat.png",
       link: "https://github.com/Nugrahaganteng/beasiswaa.git",
       isVideo: false,
     },
