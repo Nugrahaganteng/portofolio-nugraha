@@ -33,7 +33,7 @@ export default function Footer() {
             <AiFillInstagram size={24} />
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="linkedin.com/in/nugraha-firizki-" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors"
