@@ -18,7 +18,7 @@ export default function Home() {
   const [, setScrolled] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { scrollYProgress } = useScroll();
-  
+
   // Parallax effect untuk background
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
@@ -37,7 +37,7 @@ export default function Home() {
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("mousemove", handleMouseMove);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
@@ -75,7 +75,7 @@ export default function Home() {
           id="home"
         >
           {/* Animated Background Elements */}
-          <motion.div 
+          <motion.div
             className="absolute inset-0 pointer-events-none"
             style={{ y: backgroundY, opacity }}
           >
@@ -97,7 +97,7 @@ export default function Home() {
                 ease: "easeInOut",
               }}
             />
-            
+
             <motion.div
               className="absolute bottom-1/4 -right-40 w-[500px] h-[500px] rounded-full"
               style={{
@@ -144,7 +144,7 @@ export default function Home() {
           {/* Main Content Container */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              
+
               {/* Text Content */}
               <motion.div
                 variants={containerVariants}
@@ -153,8 +153,8 @@ export default function Home() {
                 className="text-black dark:text-white space-y-6 order-1 lg:order-1"
               >
                 {/* Badge dengan glow effect */}
-                <motion.div 
-                  variants={itemVariants} 
+                <motion.div
+                  variants={itemVariants}
                   className="inline-block relative"
                 >
                   <motion.div
@@ -180,7 +180,7 @@ export default function Home() {
                   className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-snug"
                 >
                   Building{' '}
-                  <motion.span 
+                  <motion.span
                     className="relative inline-block"
                     whileHover={{ scale: 1.05 }}
                   >
@@ -198,11 +198,11 @@ export default function Home() {
                     <motion.span
                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                       animate={{ x: ['-200%', '200%'] }}
-                      transition={{ 
-                        duration: 3, 
-                        repeat: Infinity, 
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
                         repeatDelay: 2,
-                        ease: "easeInOut" 
+                        ease: "easeInOut"
                       }}
                     />
                   </motion.span>
@@ -221,17 +221,21 @@ export default function Home() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
                   >
-                    Hi, I'm <span className="font-semibold text-black dark:text-white">Nugraha Algeio</span>
+                    <p>
+                      {"Hi, I'm "}
+                      <span className="font-semibold text-black dark:text-white">Nugraha Algeio</span>
+                    </p>
+
                   </motion.p>
                 </motion.div>
-                
+
                 {/* Description */}
                 <motion.p
                   variants={itemVariants}
                   transition={{ delay: 0.3 }}
                   className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl pt-2"
                 >
-                 Saya seorang insinyur perangkat lunak frontend dan perancang antarmuka yang berdedikasi untuk menciptakan pengalaman digital yang  <span className="font-semibold text-black dark:text-white"> mudah diakses, berkinerja tinggi,</span>, <span className="font-semibold text-black dark:text-white">dan responsive</span>untuk digunakan
+                  Saya seorang insinyur perangkat lunak frontend dan perancang antarmuka yang berdedikasi untuk menciptakan pengalaman digital yang  <span className="font-semibold text-black dark:text-white"> mudah diakses, berkinerja tinggi,</span>, <span className="font-semibold text-black dark:text-white">dan responsive</span>untuk digunakan
                 </motion.p>
 
                 {/* CTA Buttons dengan enhanced hover effects */}
@@ -311,7 +315,7 @@ export default function Home() {
                   ))}
                 </motion.div>
               </motion.div>
-              
+
               {/* Photo Section dengan enhanced effects */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -335,7 +339,7 @@ export default function Home() {
                   />
 
                   {/* Glassmorphism Frame */}
-                  <motion.div 
+                  <motion.div
                     className="relative rounded-3xl overflow-hidden backdrop-blur-xl bg-white/50 dark:bg-black/50 p-3 border border-gray-200 dark:border-gray-800 shadow-2xl"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
@@ -381,14 +385,14 @@ export default function Home() {
                   {/* Floating Badge - Available */}
                   <motion.div
                     className="absolute -top-4 -right-4 bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-xl shadow-xl border border-gray-700 dark:border-gray-300"
-                    animate={{ 
+                    animate={{
                       y: [0, -8, 0],
                       rotate: [0, 3, 0, -3, 0]
                     }}
-                    transition={{ 
-                      duration: 3, 
-                      repeat: Infinity, 
-                      ease: "easeInOut" 
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
                     }}
                     whileHover={{ scale: 1.1 }}
                   >
@@ -405,15 +409,15 @@ export default function Home() {
                   {/* Experience Badge */}
                   <motion.div
                     className="absolute -bottom-6 -left-6 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-2 border-gray-300 dark:border-gray-700 text-black dark:text-white px-6 py-4 rounded-2xl shadow-2xl"
-                    animate={{ 
+                    animate={{
                       y: [0, 8, 0],
                       rotate: [0, -2, 0, 2, 0]
                     }}
-                    transition={{ 
-                      duration: 4, 
-                      repeat: Infinity, 
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
                       ease: "easeInOut",
-                      delay: 0.5 
+                      delay: 0.5
                     }}
                     whileHover={{ scale: 1.1 }}
                   >
@@ -438,7 +442,7 @@ export default function Home() {
               >
                 <span className="text-xs uppercase tracking-wider">Scroll</span>
                 <svg width="20" height="30" viewBox="0 0 20 30" fill="none" className="opacity-60">
-                  <rect x="1" y="1" width="18" height="28" rx="9" stroke="currentColor" strokeWidth="2"/>
+                  <rect x="1" y="1" width="18" height="28" rx="9" stroke="currentColor" strokeWidth="2" />
                   <motion.circle
                     cx="10"
                     cy="10"
@@ -492,7 +496,7 @@ export default function Home() {
                 My Certificates and Experience
               </h2>
               <CertificateShowcase />
-              <Article /> 
+              <Article />
             </div>
           </section>
 
@@ -522,7 +526,7 @@ export default function Home() {
               <ContactSection />
             </div>
           </section>
-          
+
           <Footer />
         </section>
       </main>
