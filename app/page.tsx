@@ -12,7 +12,12 @@ import ContactSection from "@/componen/ContactSection";
 import Footer from "@/componen/Footer";
 import Article from "@/componen/Article";
 import Menu from "@/componen/Menu";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion";
 
 export default function Home() {
   const [, setScrolled] = useState(false);
@@ -89,7 +94,6 @@ export default function Home() {
 
           {/* ===================== HERO CONTENT ===================== */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full grid lg:grid-cols-2 gap-12 items-center">
-            
             {/* TEXT AREA */}
             <motion.div
               variants={containerVariants}
@@ -123,7 +127,10 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 className="text-2xl md:text-3xl font-light text-gray-600 dark:text-gray-400"
               >
-                Hi, I'm <span className="font-semibold text-black dark:text-white">Nugraha Algeio</span>
+                Hi, I&apos;m{" "}
+                <span className="font-semibold text-black dark:text-white">
+                  Nugraha Algeio
+                </span>
               </motion.p>
 
               <motion.p
@@ -131,10 +138,21 @@ export default function Home() {
                 transition={{ delay: 0.3 }}
                 className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl pt-2"
               >
-                Saya seorang insinyur perangkat lunak frontend dan perancang antarmuka yang berdedikasi untuk menciptakan pengalaman digital yang{" "}
-                <span className="font-semibold text-black dark:text-white">mudah diakses</span>,{" "}
-                <span className="font-semibold text-black dark:text-white">berkinerja tinggi</span>, dan{" "}
-                <span className="font-semibold text-black dark:text-white">responsif</span>.
+                Saya seorang insinyur perangkat lunak frontend dan perancang
+                antarmuka yang berdedikasi untuk menciptakan pengalaman digital
+                yang{" "}
+                <span className="font-semibold text-black dark:text-white">
+                  mudah diakses
+                </span>
+                ,{" "}
+                <span className="font-semibold text-black dark:text-white">
+                  berkinerja tinggi
+                </span>
+                , dan{" "}
+                <span className="font-semibold text-black dark:text-white">
+                  responsif
+                </span>
+                .
               </motion.p>
 
               <motion.div
@@ -194,12 +212,16 @@ export default function Home() {
                   <span className="relative w-2.5 h-2.5 bg-green-500 rounded-full">
                     <span className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></span>
                   </span>
-                  <span className="text-sm font-semibold tracking-wide">Student</span>
+                  <span className="text-sm font-semibold tracking-wide">
+                    Student
+                  </span>
                 </div>
 
                 <div className="absolute -bottom-6 -left-6 bg-white/95 dark:bg-black/90 border border-gray-300 dark:border-gray-700 text-black dark:text-white px-6 py-3 rounded-2xl shadow-xl backdrop-blur-sm">
                   <div className="text-xl sm:text-2xl font-bold">3+ Years</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Experience</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">
+                    Experience
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -239,7 +261,10 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="see-certificate" className="bg-gray-100 dark:bg-[#0c0a0a] py-20">
+          <section
+            id="see-certificate"
+            className="bg-gray-100 dark:bg-[#0c0a0a] py-20"
+          >
             <div className="container mx-auto px-6">
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-16 text-center">
                 My Certificates and Experience
@@ -249,7 +274,10 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="my-skills" className="bg-gray-100 dark:bg-[#0c0a0a] py-20">
+          <section
+            id="my-skills"
+            className="bg-gray-100 dark:bg-[#0c0a0a] py-20"
+          >
             <div className="container mx-auto px-6">
               <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-900 dark:text-gray-100 mb-16">
                 My Toolkit & Tech Stack
@@ -258,7 +286,10 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="testimonials" className="bg-gray-100 dark:bg-[#0c0a0a] py-20">
+          <section
+            id="testimonials"
+            className="bg-gray-100 dark:bg-[#0c0a0a] py-20"
+          >
             <div className="container mx-auto px-6">
               <h2 className="text-3xl md:text-5xl font-semibold text-center text-gray-900 dark:text-gray-100 mb-16">
                 What Clients Say
@@ -267,7 +298,10 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="contact" className="bg-gray-100 dark:bg-[#0c0a0a] pt-10 pb-20">
+          <section
+            id="contact"
+            className="bg-gray-100 dark:bg-[#0c0a0a] pt-10 pb-20"
+          >
             <div className="container mx-auto px-6">
               <h2 className="text-3xl md:text-6xl font-semibold text-center text-gray-900 dark:text-gray-100 mb-16">
                 Ready to Start a Project?
