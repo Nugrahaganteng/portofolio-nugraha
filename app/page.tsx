@@ -138,7 +138,7 @@ export default function Home() {
                 transition={{ delay: 0.3 }}
                 className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl pt-2"
               >
-                Saya seorang insinyur perangkat lunak frontend dan perancang
+                Saya seorang siswa yang mengembangkan perangkat lunak frontend dan perancang
                 antarmuka yang berdedikasi untuk menciptakan pengalaman digital
                 yang{" "}
                 <span className="font-semibold text-black dark:text-white">

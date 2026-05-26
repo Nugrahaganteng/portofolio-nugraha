@@ -45,7 +45,7 @@ export default function SelectedWork() {
       isVideo: true,
     },
     {
-      id: 5,
+      id: 2,
       title: "Tech Experience Showcase",
       description:
         "Video ini menampilkan pengalaman saya membangun berbagai aplikasi dengan teknologi modern dan interaktif.",
@@ -62,7 +62,7 @@ export default function SelectedWork() {
       isVideo: true,
     },
     {
-      id: 8,
+      id: 3,
       title: "Website CERTISAT",
       description:
         "Website ini digunakan untuk menampilkan dan mengelola sertifikat siswa, alumni, dan perusahaan di Sekolah Pesat dengan sistem berbasis web yang modern dan responsif.",
@@ -75,15 +75,15 @@ export default function SelectedWork() {
         "Admin Seeder",
         "CRUD",
       ],
-        image: "/image/Selected-my-Work/certisat.png",
+      image: "/image/Selected-my-Work/certisat.png",
       link: "https://github.com/Nugrahaganteng/beasiswaa.git",
       isVideo: false,
     },
     {
-      id: 7,
+      id: 4,
       title: "Website BEASISWA",
       description:
-        "Sistem Pendaftaran Beasiswa Pesat adalah aplikasi web untuk mengelola pendaftaran beasiswa mahasiswa. IPK otomatis ter-generate dan menentukan jenis beasiswa yang sesuai. Sistem ini memiliki validasi otomatis dan penyimpanan data pendaftar.",
+        "Sistem Pendaftaran Beasiswa Pesat adalah aplikasi web untuk mengelola pendaftaran beasiswa mahasiswa. IPK otomatis ter-generate dan menentukan jenis beasiswa yang sesuai.",
       technologies: [
         "Laravel 11",
         "MySQL",
@@ -91,12 +91,12 @@ export default function SelectedWork() {
         "PHP 8.1+",
         "Blade Templates",
       ],
-        image: "/image/Selected-my-Work/poto1.png",
+      image: "/image/Selected-my-Work/poto1.png",
       link: "https://github.com/Nugrahaganteng/beasiswaa.git",
       isVideo: false,
     },
     {
-      id: 6,
+      id: 5,
       title: "Website LISH_EDU",
       description:
         "Lish_Edu adalah website kursus bahasa Inggris online yang menawarkan layanan pemesanan kelas, profil tutor, dan sistem pembelajaran interaktif.",
@@ -114,7 +114,7 @@ export default function SelectedWork() {
       isVideo: false,
     },
     {
-      id: 2,
+      id: 6,
       title: "Website HOTEL",
       description:
         "Website ini berfungsi untuk anda memesan tiket untuk menginap di hotel impian anda.",
@@ -134,7 +134,7 @@ export default function SelectedWork() {
       isVideo: false,
     },
     {
-      id: 3,
+      id: 7,
       title: "Website TRAVEL",
       description:
         "Website ini untuk memesan tiket liburan dan menampilkan destinasi terbaik dan kuliner.",
@@ -153,7 +153,7 @@ export default function SelectedWork() {
       isVideo: false,
     },
     {
-      id: 4,
+      id: 8,
       title: "Website PERNIKAHAN",
       description:
         "Website ini untuk pasangan yang ingin membuat undangan digital.",
@@ -171,11 +171,72 @@ export default function SelectedWork() {
       link: "https://github.com/Nugrahaganteng/undangan",
       isVideo: false,
     },
+    {
+      id: 9,
+      title: "Website HASMI",
+      description:
+        "Website company profile modern dengan tampilan profesional dan responsif.",
+      technologies: [
+        "Laravel",
+        "Tailwind CSS",
+        "Responsive Design",
+        "CMS",
+      ],
+      image: "/image/Selected-my-Work/hasmi.png",
+      link: "https://github.com/salmansyarif/HASMI.git",
+      isVideo: false,
+    },
+    {
+      id: 10,
+      title: "Website KONTEN",
+      description:
+        "Website agency digital dengan desain modern dan landing page interaktif.",
+      technologies: [
+        "laravel",
+        "Tailwind CSS",
+        "Animation",
+        "Responsive",
+         "CMS",
+      ],
+      image: "/image/Selected-my-Work/konten.png",
+      link: "https://github.com/Nugrahaganteng/konten.digital.git",
+      isVideo: false,
+    },
+    {
+      id: 11,
+      title: "Website PN",
+      description:
+        "Website Pengadilan Negeri dengan tampilan profesional dan sistem informasi publik.",
+      technologies: [
+        "Laravel",
+        "Blade",
+        "MySQL",
+        "Admin Panel",
+      ],
+      image: "/image/Selected-my-Work/pn.png",
+      link: "https://github.com/ArifkyWildan/MONITORING-PENGADILAN-KOTABOGOR.git",
+      isVideo: false,
+    },
+    {
+      id: 12,
+      title: "Website PPID",
+      description:
+        "Website PPID untuk pengelolaan informasi publik dengan tampilan responsif.",
+      technologies: [
+        "Laravel",
+        "Tailwind CSS",
+        "CRUD",
+        "Authentication",
+      ],
+      image: "/image/Selected-my-Work/ppid.png",
+      link: "https://github.com/Nugrahaganteng/PPID-PENGADILAN-NEGERI.git",
+      isVideo: false,
+    },
   ];
 
-  const ProjectCard = ({ project }) => (
+  const ProjectCard = ({ project }: any) => (
     <div className="grid md:grid-cols-2 items-center gap-10 mb-28">
-      {/* TEKS KIRI */}
+      {/* TEXT */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -204,9 +265,9 @@ export default function SelectedWork() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-[#757575] text-xl md:text-2xl font-semibold space-y-1"
+          className="text-[#757575] text-lg md:text-xl font-semibold space-y-1"
         >
-          {project.technologies.map((tech, i) => (
+          {project.technologies.map((tech: string, i: number) => (
             <li key={i} className="flex items-start">
               <span className="mr-2">•</span>
               <span>{tech}</span>
@@ -220,19 +281,28 @@ export default function SelectedWork() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex items-center gap-4"
         >
-          <Link href={project.link} className="text-white font-semibold relative group">
+          <Link
+            href={project.link}
+            target="_blank"
+            className="text-white font-semibold relative group"
+          >
             <span className="relative z-10 text-[#414141] dark:text-white">
               Explore this project
             </span>
+
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#414141] dark:bg-white transition-all group-hover:w-full"></span>
           </Link>
-          <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
+
+          <motion.div
+            whileHover={{ rotate: 360 }}
+            transition={{ duration: 0.5 }}
+          >
             <FaGithub className="dark:text-gray-400 text-[#414141] text-3xl" />
           </motion.div>
         </motion.div>
       </motion.div>
 
-      {/* MEDIA KANAN */}
+      {/* MEDIA */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -254,7 +324,7 @@ export default function SelectedWork() {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              />
             ) : (
               <video
                 className="w-full h-full object-contain rounded-lg"
@@ -264,7 +334,6 @@ export default function SelectedWork() {
                 loop
               >
                 <source src={project.video} type="video/mp4" />
-                Browser Anda tidak mendukung video.
               </video>
             )
           ) : (
@@ -273,7 +342,7 @@ export default function SelectedWork() {
               alt={project.title}
               width={1280}
               height={720}
-              className="object-cover object-top rounded-lg"
+              className="object-cover object-top rounded-lg w-full h-full"
             />
           )}
         </div>
@@ -282,7 +351,10 @@ export default function SelectedWork() {
   );
 
   return (
-    <section className="py-20 px-6 md:px-16 max-w-screen-xl mx-auto" id="work">
+    <section
+      className="py-20 px-6 md:px-16 max-w-screen-xl mx-auto"
+      id="work"
+    >
       {projects.map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}

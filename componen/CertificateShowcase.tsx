@@ -51,6 +51,13 @@ export default class CertificateShowcase extends React.Component<{}, Certificate
       image: '/image/certificate/sertifikat 3.png',
       likeCount: 16,
     },
+    {
+  title: 'Sertifikasi Kompetensi - Pengembangan Perangkat Lunak dan Pemrograman',
+  description:
+    'Saya berhasil menyelesaikan Sertifikasi Kompetensi dari Lembaga Sertifikasi Profesi Informatika dengan skema Pengembangan Perangkat Lunak dan Pemrograman. Sertifikasi ini membuktikan kemampuan saya dalam bidang pengembangan software dan pemrograman dengan predikat "Kompeten (bnsp)".',
+  image: '/image/certificate/bnsp.png',
+  likeCount: 1000,
+},
   ];
 
   constructor(props: {}) {

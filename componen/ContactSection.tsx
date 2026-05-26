@@ -60,6 +60,8 @@ export default function ContactSection() {
     };
 
     return (
+        
+        
         <div className="w-full bg-[#e8e8e8] dark:bg-[#161211] dark:text-white text-gray-900 border-4 dark:border-[#161211] border-[#d7d7d7] transition-colors duration-300 rounded-[5px] p-4 md:p-8">
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 max-w-7xl mx-auto">
                 
